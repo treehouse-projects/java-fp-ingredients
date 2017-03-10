@@ -21,12 +21,17 @@ public class Main {
         System.out.println(ingredient);
       }*/
 
-      ingredients.forEach(new Consumer<String>() {
+      /*ingredients.forEach(new Consumer<String>() {
         @Override
         public void accept(String s) {
           System.out.println(s);
         }
-      });
+      });*/
+
+      Consumer<String> printer = ingredient -> System.out.println(ingredient);
+
+      ingredients.forEach(printer);
+
 
     }
 }
